@@ -5,14 +5,15 @@ To be created:
 - Landing page
 - Projects page
 - Contact page
-- Javascript
-- CSS
+- Backend
+- Styling
 
 Specializations that are a bonus:
-- Sass
-- Less
-- Jade
+- Any kind of HTML/CSS
+- Python
 - Jquery
-- PaperJS
+- sqlalchemy
+- flask
+- bcrypt
 
-The Power Portfolio is a free to use template created by the CSST team.
+The Power Portfolio is a free to use template created by the Tumblr Community / CSST team.
