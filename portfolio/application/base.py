@@ -3,6 +3,7 @@ from flask import Flask
 from os.path import abspath, join, split
 
 application = Flask("PowerPortfolio")
+application.secret_key = "SECRET_KEY" # TODO
 application.config["database"] = "sqlite:///portfolio.db"
 
 root_dir = split(split(abspath(__file__))[0])[0]
