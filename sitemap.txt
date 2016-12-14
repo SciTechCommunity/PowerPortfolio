@@ -2,13 +2,17 @@
 /admin <== single page web app for admin of the portfolio, with session cookies for all subdirs /admin
 
 /api/details <== json describing the person (name, location, GitHub links, maybe ph number)
-/api/projects/count <== total number of projects in the portfolio 
+/api/projects/count <== total number of projects in the portfolio
 /api/projects/17 <== json describing project 17 (or any other number in [0..count) )
 /api/experience/count <== total number of previous jobs / volunteering things
 /api/experience/17 <== json describing what happened in that job
 
-/admin/api/details <== accepts json via post containing details to update database 
+/admin/api/details <== accepts json via post containing details to update database
 /admin/api/projects/new <== accepts json via post containing details of a new project
-/admin/api/projects/17 <== accepts json via post containing details of project 17 to update database 
-/admin/api/experience/new <== self explanatory 
-/admin/api/experience/17 <== self explanatory 
+/admin/api/projects/17 <== accepts json via post containing details of project 17 to update database
+/admin/api/experience/new <== self explanatory
+/admin/api/experience/17 <== self explanatory
+
+/admin/api/login <== accepts json via post containing a single "password" field and returns whether the password was valid
+/admin/api/logout <== logs out
+/admin/api/logged_in <== checks the cookies to see if the user is already logged in

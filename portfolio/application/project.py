@@ -11,7 +11,7 @@ def project_count(db_session):
     count = db_session.query(Project).count()
 
     return jsonify(**{
-        'count': count
+        "count": count
     })
 
 @application.route("/api/projects/<int:key>")

@@ -90,5 +90,6 @@ ENV/
 # Rope project settings
 .ropeproject
 
-# Database
+# Database and other info
 *.db
+passwd
