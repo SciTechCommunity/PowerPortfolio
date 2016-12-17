@@ -26,25 +26,29 @@ The Power Portfolio is a free to use template created by the Tumblr Community / 
 For development purposes you can run PowerPortfolio on a local server by doing the following:
 
  1. Create a virtual enviroment named venv
+ 
  ```
- python -m venv venv
+ python3 -m venv venv
  ```
  2. Activate the virtual enviroment:
+ 
+ Windows:
  ```
  venv\Scripts\activate.bat
  ```
+ 
+ \*nix:
+ ```
+ source venv/bin/activate
+ ```
  3. The first time you run PowerPortfolio do:
+ 
  ```
- pip install -e
- ```
- as well as installing the dependencies:
- ```
- pip install flask
- pip install sqlalchemy
- pip install bcrypt
+ pip install -e .
  ```
  
  4. To run the app do:
+ 
  ```
  python -m portfolio
  ```
