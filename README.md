@@ -21,7 +21,7 @@ A CSST project open to the public!
 
 The Power Portfolio is a free to use template created by the Tumblr Community / CSST team.
 
-###Running PowerPortfolio on local Server23
+###Running PowerPortfolio on local Server
 
 For development purposes you can run PowerPortfolio on a local server by doing the following:
 
