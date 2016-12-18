@@ -27,6 +27,6 @@ class Project(Base):
             key=self.key,
             name=self.name,
             url=self.url,
-            show = self.Boolean,
+            show = self.show,
             description=self.description
         )
