@@ -43,12 +43,15 @@ def project_new(db_session):
         abort(400)
     if "url" not in data:
         abort(400)
+    if "show" not in data:
+        abort(400)
     if "description" not in data:
         abort(400)
 
     project = Project(
             name=data["name"],
             url=data["url"],
+            show=data["show"],
             description=data["description"]
     )
 
@@ -59,8 +62,33 @@ def project_new(db_session):
     except IntegrityError:
         return jsonify(**{"error": "project could not be added"})
 
-@application.route("/admin/api/projects/<int>", methods=["POST"])
+@application.route("/admin/api/projects/<int:key>", methods=["POST"])
 @needs_db
 #@needs_login -- not yet implemented
 def project_write(db_session, key):
-    abort(503)
+    """Updates information in existing project"""
+    data = request.get_json()
+    if data is None:
+        abort(400)
+    project = db_session.query(
+            Project
+        ).filter(
+            Project.key == key
+        )
+    if project.count() == 1:
+        project = project.one()
+        if "name" in data:
+            project.name = data["name"]
+        if "url" in data:
+            project.url = data["url"]
+        if "show" in data:
+            project.show = data["show"]
+        if "description" in data:
+            project.description = data["description"]
+        try:
+            db_session.commit()
+            return ("", 204)
+        except IntegrityError:
+            return jsonify(**{"error": "project could not be updated"})
+    else:
+        return jsonify(**{"error": "project not found"})

@@ -2,7 +2,8 @@
 from sqlalchemy import (
         Column,
         Integer,
-        String
+        String,
+        Boolean 
 )
 from .base import Base
 
@@ -17,6 +18,7 @@ class Project(Base):
     key = Column(Integer, primary_key=True)
     name = Column(String)
     url = Column(String)
+    show = Column(Boolean)
     description = Column(String)
 
     def to_json(self):
@@ -25,5 +27,6 @@ class Project(Base):
             key=self.key,
             name=self.name,
             url=self.url,
+            show=self.show,
             description=self.description
         )
