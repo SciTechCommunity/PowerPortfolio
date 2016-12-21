@@ -43,12 +43,15 @@ def project_new(db_session):
         abort(400)
     if "url" not in data:
         abort(400)
+    if "show" not in data:
+        abort(400)
     if "description" not in data:
         abort(400)
 
     project = Project(
             name=data["name"],
             url=data["url"],
+            show = data["show"],
             description=data["description"]
     )
 
