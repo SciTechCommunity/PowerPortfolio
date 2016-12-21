@@ -51,7 +51,7 @@ def project_new(db_session):
     project = Project(
             name=data["name"],
             url=data["url"],
-            show=data["show"],
+            show = data["show"],
             description=data["description"]
     )
 

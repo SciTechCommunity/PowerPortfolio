@@ -2,8 +2,8 @@
 from sqlalchemy import (
         Column,
         Integer,
-        String,
-        Boolean 
+        String, 
+        Boolean
 )
 from .base import Base
 
@@ -27,6 +27,6 @@ class Project(Base):
             key=self.key,
             name=self.name,
             url=self.url,
-            show=self.show,
+            show = self.show,
             description=self.description
         )
