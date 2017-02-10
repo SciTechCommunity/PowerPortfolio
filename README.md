@@ -52,4 +52,15 @@ For development purposes you can run PowerPortfolio on a local server by doing t
  ```
  python -m portfolio
  ```
-    
+
+### Running Test
+To run a test, first open 
+```settings.cfg``` 
+and change the DATABASE url to a testing database. 
+
+Next run
+```
+python test.py
+```
+
+To move out of testing mode, change DATABASE in settings.cfg to the appropiate url.  
