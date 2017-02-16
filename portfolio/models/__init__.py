@@ -7,7 +7,7 @@ from functools import wraps
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-engine = create_engine(application.config["database"], echo=True)
+engine = create_engine(application.config["DATABASE"], echo=True)
 Base.metadata.create_all(engine)
 
 Session = sessionmaker(

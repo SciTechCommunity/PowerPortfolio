@@ -46,10 +46,27 @@ For development purposes you can run PowerPortfolio on a local server by doing t
  ```
  pip install -e .
  ```
+ 4. Configure settings.cfg with the desired database url.
  
- 4. To run the app do:
+ 
+ 5. To run the app do:
  
  ```
  python -m portfolio
  ```
-    
+
+### Running Test
+To run a test, first open settings.cfg 
+and change the DATABASE url to the url of the testing database. 
+
+Next run
+```
+python test.py
+```
+
+To move out of testing mode, change DATABASE in settings.cfg to the original databse url.  
+Finally, delete the test database file. 
+
+### Setting a Password
+PowerPortfolio does not handle password creation. To login is, first create a bcrypt hashed password and
+store it in a file named 'passwd.txt'. 

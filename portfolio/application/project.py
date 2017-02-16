@@ -1,5 +1,6 @@
 # /application/project.py
 from portfolio.models import Project, needs_db
+from portfolio.admin import needs_logged_in
 from portfolio.application import application
 
 from flask import abort, jsonify, request
@@ -31,7 +32,7 @@ def project_read(db_session, key):
 
 @application.route("/admin/api/projects/new", methods=["POST"])
 @needs_db
-#@needs_login -- not yet implemented
+@needs_logged_in
 def project_new(db_session):
     """ Creates a new project. """
     data = request.get_json()
@@ -64,7 +65,7 @@ def project_new(db_session):
 
 @application.route("/admin/api/projects/<int:key>", methods=["POST"])
 @needs_db
-#@needs_login -- not yet implemented
+@needs_logged_in
 def project_write(db_session, key):
     """Updates information in existing project"""
     data = request.get_json()
