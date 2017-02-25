@@ -5,11 +5,12 @@
 A CSST project open to the public!
 
 ###To be created:
+- Login page
 - Landing page
 - Projects page
 - Contact page
-- Backend
-- Styling
+- Backend API
+- DOM events
 
 ###Specializations that are a bonus:
 - Any kind of HTML/CSS
