@@ -4,7 +4,7 @@
 [logo]: https://img.shields.io/badge/License-MIT-yellow.svg "Logo Title Text 2"
 A CSST project open to the public!
 
-###To be created:
+### To be created:
 - Login page
 - Landing page
 - Projects page
@@ -12,7 +12,7 @@ A CSST project open to the public!
 - Backend API
 - DOM events
 
-###Specializations that are a bonus:
+### Specializations that are a bonus:
 - Any kind of HTML/CSS
 - Python 3
 - Jquery
@@ -22,7 +22,7 @@ A CSST project open to the public!
 
 The Power Portfolio is a free to use template created by the Tumblr Community / CSST team.
 
-###Running PowerPortfolio on local Server
+### Running PowerPortfolio on local Server
 
 For development purposes you can run PowerPortfolio on a local server by doing the following:
 
